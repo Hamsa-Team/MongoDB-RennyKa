@@ -19,7 +19,7 @@ employees.get('/:name', async ctx => {
     const name = ctx.params.name;
     const result = name ? await ctx.db.collection('employees').find({
         employee_name: name
-    }).toArray() : null
+    }) : null
     ctx.body = result;
 })
 
